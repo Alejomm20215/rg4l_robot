@@ -1,0 +1,42 @@
+[project]
+name = "rg4l-robot"
+version = "0.1.0"
+description = "Cleaner robot with enhanced vision + Arduino control."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [{ name = "rg4l_robot contributors" }]
+dependencies = [
+  "numpy>=2.1",
+  "pydantic>=2.9",
+  "pyserial>=3.5",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+vision = [
+  "opencv-python>=4.10",
+]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.7",
+]
+
+[project.scripts]
+rg4l = "rg4l_robot.cli:app"
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+

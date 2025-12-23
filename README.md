@@ -1,8 +1,11 @@
 # rg4l_robot
 
-Clean robot project with:
+## Robot project developed with:
 - **Python (uv-managed)** for UI/interface + vision + calculations
 - **Arduino C++** for low-level control
+
+I'll be developing this with my coworker, Tusk; we expect the project to take a long time, so we're currently on the planning stage of the project
+
 
 ## Prereqs
 - **Python 3.12+**
